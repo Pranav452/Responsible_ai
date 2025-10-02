@@ -1,0 +1,12 @@
+{"time":"2025-10-02T13:40:38.19290992Z","level":"INFO","msg":"stream: starting","core version":"0.22.1"}
+{"time":"2025-10-02T13:40:38.361223239Z","level":"INFO","msg":"stream: created new stream","id":"lv6xvgev"}
+{"time":"2025-10-02T13:40:38.361493565Z","level":"INFO","msg":"stream: started","id":"lv6xvgev"}
+{"time":"2025-10-02T13:40:38.362237313Z","level":"INFO","msg":"handler: started","stream_id":"lv6xvgev"}
+{"time":"2025-10-02T13:40:38.362271703Z","level":"INFO","msg":"sender: started","stream_id":"lv6xvgev"}
+{"time":"2025-10-02T13:40:38.362293794Z","level":"INFO","msg":"writer: started","stream_id":"lv6xvgev"}
+{"time":"2025-10-02T16:21:28.904491941Z","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading artifact run-lv6xvgev-evaluation_results","runtime_seconds":0.304268967},{"desc":"uploading media/table/evaluation_results_0_3dd500b24dc7cea5076b.table.json","runtime_seconds":0.005689301},{"desc":"updating run metadata","runtime_seconds":0.00305433}],"total_operations":3}}
+{"time":"2025-10-02T16:21:29.74101251Z","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-10-02T16:21:29.828087449Z","level":"INFO","msg":"stream: closing","id":"lv6xvgev"}
+{"time":"2025-10-02T16:21:29.82812283Z","level":"INFO","msg":"handler: closed","stream_id":"lv6xvgev"}
+{"time":"2025-10-02T16:21:29.828378426Z","level":"INFO","msg":"sender: closed","stream_id":"lv6xvgev"}
+{"time":"2025-10-02T16:21:29.828422587Z","level":"INFO","msg":"stream: closed","id":"lv6xvgev"}

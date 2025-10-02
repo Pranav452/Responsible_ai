@@ -1,0 +1,33 @@
+Loading base model: meta-llama/Meta-Llama-3-8B...
+config.json: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 654/654 [00:00<00:00, 2.16MB/s]
+model.safetensors.index.json: 100%|████████████████████████████████████████████████████████████████████████████████████████████| 23.9k/23.9k [00:00<00:00, 55.1MB/s]
+model-00004-of-00004.safetensors: 100%|█████████████████████████████████████████████████████████████████████████████████████████| 1.17G/1.17G [00:05<00:00, 208MB/s]
+model-00001-of-00004.safetensors: 100%|█████████████████████████████████████████████████████████████████████████████████████████| 4.98G/4.98G [00:20<00:00, 244MB/s]
+model-00003-of-00004.safetensors: 100%|█████████████████████████████████████████████████████████████████████████████████████████| 4.92G/4.92G [00:22<00:00, 223MB/s]
+model-00002-of-00004.safetensors: 100%|█████████████████████████████████████████████████████████████████████████████████████████| 5.00G/5.00G [00:22<00:00, 221MB/s]
+Fetching 4 files: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████| 4/4 [00:22<00:00,  5.69s/it]
+Loading checkpoint shards: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████| 4/4 [00:14<00:00,  3.58s/it]
+generation_config.json: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████| 177/177 [00:00<00:00, 537kB/s]
+tokenizer_config.json: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████| 50.6k/50.6k [00:00<00:00, 66.5MB/s]
+tokenizer.json: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████| 9.09M/9.09M [00:00<00:00, 30.7MB/s]
+special_tokens_map.json: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████| 73.0/73.0 [00:00<00:00, 244kB/s]
+Loading evaluation dataset...
+Generating train split: 1000 examples [00:00, 102862.08 examples/s]
+Loading toxicity detection model...
+Starting evaluation loop...
+Evaluating responses:   0%|                                                                                                                | 0/1000 [00:00<?, ?it/s]
+Traceback (most recent call last):
+  File "/teamspace/studios/this_studio/responsible_ai_assignment/src/evaluation/evaluate.py", line 100, in <module>
+    main(args.config, args.model_path)
+  File "/teamspace/studios/this_studio/responsible_ai_assignment/src/evaluation/evaluate.py", line 73, in main
+    response = generate_response(model, tokenizer, prompt_history)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/teamspace/studios/this_studio/responsible_ai_assignment/src/evaluation/evaluate.py", line 23, in generate_response
+    prompt = tokenizer.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/site-packages/transformers/tokenization_utils_base.py", line 1620, in apply_chat_template
+    chat_template = self.get_chat_template(chat_template, tools)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/site-packages/transformers/tokenization_utils_base.py", line 1798, in get_chat_template
+    raise ValueError(
+ValueError: Cannot use chat template functions because tokenizer.chat_template is not set and no template argument was passed! For information about writing templates and setting the tokenizer.chat_template attribute, please see the documentation at https://huggingface.co/docs/transformers/main/en/chat_templating

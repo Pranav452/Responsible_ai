@@ -1,0 +1,23 @@
+# Core ML & Transformers
+transformers
+torch
+
+# For QLoRA and efficient training
+accelerate
+bitsandbytes
+peft
+trl
+
+# For data handling
+datasets
+pandas
+
+# For evaluation
+scikit-learn
+detoxify
+
+# For experiment tracking
+wandb
+
+# For config files
+pyyaml

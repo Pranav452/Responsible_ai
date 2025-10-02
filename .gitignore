@@ -1,0 +1,13 @@
+# Python
+venv/
+__pycache__/
+*.pyc
+
+# Data & Models
+/src/data/
+/src/models/
+
+# IDE & OS files
+.vscode/
+.idea/
+*.DS_Store

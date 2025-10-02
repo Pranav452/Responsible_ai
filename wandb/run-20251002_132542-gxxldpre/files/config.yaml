@@ -1,0 +1,93 @@
+_wandb:
+    value:
+        cli_version: 0.22.1
+        e:
+            0jgvr9phflggmzn81uclyv0jyiypjkkm:
+                args:
+                    - --config
+                    - configs/training_config.yaml
+                cpu_count: 30
+                cpu_count_logical: 30
+                cudaVersion: "12.8"
+                disk:
+                    /:
+                        total: "532608356352"
+                        used: "84455067648"
+                email: pranavnairop090@gmail.com
+                executable: /home/zeus/miniconda3/envs/cloudspace/bin/python
+                gpu: NVIDIA A100-SXM4-40GB
+                gpu_count: 1
+                gpu_nvidia:
+                    - architecture: Ampere
+                      cudaCores: 6912
+                      memoryTotal: "42949672960"
+                      name: NVIDIA A100-SXM4-40GB
+                      uuid: GPU-404e2b1a-227a-68de-0b51-4cce51578760
+                host: 193-122-152-101
+                memory:
+                    total: "232205713408"
+                os: Linux-6.8.0-60-generic-x86_64-with-glibc2.39
+                program: -m src.evaluation.evaluate
+                python: CPython 3.12.11
+                root: /teamspace/studios/this_studio/responsible_ai_assignment
+                startedAt: "2025-10-02T13:25:42.025832Z"
+                writerId: 0jgvr9phflggmzn81uclyv0jyiypjkkm
+        m: []
+        python_version: 3.12.11
+        t:
+            "1":
+                - 1
+                - 5
+                - 11
+                - 41
+                - 49
+                - 51
+                - 53
+                - 71
+                - 98
+            "2":
+                - 1
+                - 5
+                - 11
+                - 41
+                - 49
+                - 51
+                - 53
+                - 71
+                - 98
+            "3":
+                - 13
+                - 16
+            "4": 3.12.11
+            "5": 0.22.1
+            "6": 4.56.2
+            "12": 0.22.1
+            "13": linux-x86_64
+bnb_4bit_compute_dtype:
+    value: bfloat16
+bnb_4bit_quant_type:
+    value: nf4
+dataset_name:
+    value: Anthropic/hh-rlhf
+gradient_accumulation_steps:
+    value: 2
+learning_rate:
+    value: "2e-4"
+lora_alpha:
+    value: 32
+lora_dropout:
+    value: 0.05
+lora_r:
+    value: 64
+model_name:
+    value: meta-llama/Meta-Llama-3-8B
+num_train_epochs:
+    value: 1
+output_dir:
+    value: ./src/models/llama3-8b-hh-rlhf-qlora
+per_device_train_batch_size:
+    value: 8
+use_4bit:
+    value: true
+wandb_project:
+    value: Responsible-AI-Alignment-A100

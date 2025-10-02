@@ -1,0 +1,30 @@
+# Model & Tokenizer
+model_name: "meta-llama/Meta-Llama-3-8B"
+
+# Dataset
+dataset_name: "Anthropic/hh-rlhf"
+
+# Training Hyperparameters
+output_dir: "./src/models/llama3-8b-hh-rlhf-qlora"
+num_train_epochs: 1
+per_device_train_batch_size: 8
+gradient_accumulation_steps: 2
+learning_rate: 2e-4
+
+# QLoRA Specific
+use_4bit: True
+bnb_4bit_quant_type: "nf4"
+bnb_4bit_compute_dtype: "bfloat16"
+
+# PEFT (LoRA) Specific
+lora_alpha: 32
+lora_dropout: 0.05
+lora_r: 64
+
+# W&B Logging
+wandb_project: "Responsible-AI-Alignment-A100"
+
+# --- NEW SECTION ---
+# Evaluation Settings
+evaluation:
+  judge_model: "gpt-4o-mini"
